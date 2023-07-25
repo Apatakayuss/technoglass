@@ -58,6 +58,9 @@ const ButtonWrapper = styled.div`
   display: flex;
   gap: 10px;
   margin-top: 10px;
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 `;
 const Button = styled.button`
   padding: 10px 20px;
