@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from 'styled-components'
 
-const Card = ({Header, text, box}) => {
+const Card = ({Header, text, button1Text, button2Text}) => {
   return (
     <CardWrap>
         <CapitalText>
@@ -12,10 +12,25 @@ const Card = ({Header, text, box}) => {
             {text}
         </DescText>
 
-        <Box>
-            
-        </Box>
+        <ButtonWrapper>
+        <Button>{button1Text}</Button>
+        <Button>{button2Text}</Button>
+      </ButtonWrapper>
     </CardWrap>
+
+
+
+//  This line of code below is used to display the cards I created, just style the card as required 
+
+
+//    <Card
+//    Header="Welcome to my App"
+//    text="This is a reusable component."
+//    button1Text="Click here"
+//    button2Text="Click me"
+//  />
+
+//  Card output ends
   )
 }
 
@@ -39,8 +54,18 @@ const DescText = styled.p`
     margin-top: 30px;
     margin-bottom: 30px;
 `
-const Box = styled.div`
-    background-color: blue;
-    display: flex;
-
-`
+const ButtonWrapper = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+`;
+const Button = styled.button`
+  padding: 10px 20px;
+  background-color: green;
+  color: #fff;
+  border: black;
+  cursor: pointer;
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
