@@ -17,7 +17,7 @@ export default function TopBar() {
       </InfoWrap>
       
       <Social>
-Social
+        Social
       </Social>
     </Container>
   )
